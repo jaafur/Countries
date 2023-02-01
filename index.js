@@ -12,12 +12,7 @@ search.addEventListener('click', ()=>{
     fetch(searchUrl)
   .then(res => res.json())
   .then(data => {
-    console.log(data[0]),
-    console.log(data[0].flag),
-    console.log(data[0].capital),
-    console.log(data[0].population),
-    console.log(`${data[0].currencies[0].name} - ${data[0].currencies[0].symbol}`),
-    console.log(data[0].languages[0].name)
+   
     result.innerHTML = `<img src="${data[0].flag}" class="flag">
                         <h3 class="native-name">${data[0].nativeName}</h3>
                         <h4>Capital : ${data[0].capital}</h4>
